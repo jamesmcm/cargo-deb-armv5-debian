@@ -1,0 +1,16 @@
+# action.yml
+name: 'Rust Cargo Deb Package Build (armv5, Debian)'
+description: 'Builds a debian package using cargo deb for Rust packages, statically linked (musl), targeting ARMv5'
+branding:
+  icon: 'package'
+  color: 'orange'
+inputs:
+  cmd:
+    description: 'build command'
+    required: true
+    default: 'cargo deb --target=armv5te-unknown-linux-musleabi'
+runs:
+  using: 'docker'
+  image: 'docker://jamesmcm03/cargo-deb-armv5-debian:20220703'
+  args:
+    - ${{ inputs.cmd }}
