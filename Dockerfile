@@ -9,7 +9,8 @@ RUN apt-get update && apt-get install -y \
   automake \
   autoconf \
   libtool \
-  g++
+  g++ \
+  gcc-arm-linux-gnueabi
 
 RUN apt-get install ca-certificates
 # Install rust using rustup
