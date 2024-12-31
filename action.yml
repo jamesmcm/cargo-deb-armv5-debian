@@ -11,6 +11,6 @@ inputs:
     default: 'cargo deb --target=armv5te-unknown-linux-musleabi'
 runs:
   using: 'docker'
-  image: 'docker://jamesmcm03/cargo-deb-armv5-debian:20240229'
+  image: 'docker://jamesmcm03/cargo-deb-armv5-debian:20241230'
   args:
     - ${{ inputs.cmd }}
